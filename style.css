@@ -90,7 +90,7 @@ a {
 .section {
   padding: 3rem 1rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 2rem auto; /* Ensure gaps between sections */
   text-align: center;
   animation: slideUp 1s ease-in-out;
 }
@@ -108,11 +108,39 @@ a {
   line-height: 1.8;
 }
 
+/* Alternating Section Backgrounds */
+.section:nth-child(even) {
+  background: #f1f3f5;
+  border-radius: 10px;
+}
+
+.section:nth-child(odd) {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 10px;
+}
+
+/* Parallax Section */
+.parallax {
+  background: url('Banner.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.parallax h2 {
+  font-size: 2.5rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
 /* Stats Section */
 .token-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem; /* Add spacing between cards */
   margin-top: 2rem;
 }
 
@@ -218,3 +246,31 @@ a {
     opacity: 1;
   }
 }
+
+/* Meme Section */
+.memes {
+  background: #f1f3f5;
+  border-radius: 10px;
+}
+
+.meme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-items: center;
+}
+
+.meme-item {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meme-item:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
