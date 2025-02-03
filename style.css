@@ -2,11 +2,26 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to bottom, #f8f9fa, #e0e7ff);
   color: #333;
   line-height: 1.6;
   overflow-x: hidden;
+  background: linear-gradient(135deg, #007bff, #00c1ff, #007bff, #00c1ff, #007bff);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
 }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Rest of your CSS remains the same */
 
 h1, h2, h3 {
   margin: 0;
