@@ -679,7 +679,37 @@ a {
 /* Meme Section */
 .memes {
   background: #f1f3f5;
-  border-radius: 10px;
+  padding: 4rem 1rem;
+  border-radius: 20px;
+  margin: 4rem auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.memes h2 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.memes h2::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: #007bff;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.memes p {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .meme-grid {
@@ -687,12 +717,11 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
-  justify-items: center;
 }
 
 .meme-item {
-  width: 100%;
-  max-width: 300px;
+  position: relative;
+  overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -701,5 +730,46 @@ a {
 .meme-item:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.meme-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.meme-item:hover .meme-image {
+  transform: scale(1.1);
+}
+
+.meme-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.meme-item:hover .meme-overlay {
+  opacity: 1;
+}
+
+.meme-view {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.meme-view:hover {
+  transform: scale(1.2);
 }
 

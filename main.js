@@ -27,3 +27,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   lazyImages.forEach((img) => observer.observe(img));
 });
+
