@@ -495,6 +495,7 @@ a {
   border-radius: 20px;
   margin: 4rem auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevent overflow */
 }
 
 .roadmap h2 {
@@ -624,6 +625,39 @@ a {
   transition: width 0.5s ease;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px; /* Move the timeline line to the left */
+  }
+
+  .timeline-phase {
+    padding-left: 40px; /* Adjust padding for mobile */
+  }
+
+  .phase-card {
+    width: 100%; /* Make cards full width on mobile */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .phase-icon {
+    left: 20px; /* Adjust icon position for mobile */
+    transform: translateX(0);
+  }
+
+  .roadmap h2 {
+    font-size: 2rem; /* Reduce font size for mobile */
+  }
+
+  .phase-content h3 {
+    font-size: 1.25rem; /* Reduce font size for mobile */
+  }
+
+  .phase-content ul li {
+    font-size: 0.9rem; /* Reduce font size for mobile */
+  }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .timeline::before {
