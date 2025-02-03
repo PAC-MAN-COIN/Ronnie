@@ -5,19 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ronnie the Presenter | Crypto News</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <img src="Banner.jpg" alt="Ronnie Banner" class="header-banner">
-    <div class="header-content">
-      <img src="pfp.jpg" alt="Ronnie Profile" class="header-profile">
+	<script src="main.js"></script>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <img src="Banner.jpg" alt="Ronnie Banner" class="hero-banner">
+    <div class="hero-content">
+      <img src="pfp.jpg" alt="Ronnie Profile" class="hero-profile">
       <h1>Ronnie the Presenter</h1>
       <p>The latest and greatest news about the Ronin Chain and crypto world!</p>
+      <a href="#news" class="cta-button">Explore News</a>
     </div>
   </header>
 
-  <nav class="nav-bar">
+  <!-- Navigation Bar -->
+<nav class="nav-bar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <img src="RonnieLogo.png" alt="Ronnie Logo">
+    </div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#news">News</a></li>
@@ -25,13 +35,21 @@
       <li><a href="#roadmap">Roadmap</a></li>
       <li><a href="#memes">Memes</a></li>
     </ul>
-  </nav>
+    <div class="nav-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</nav>
 
+  <!-- Main Content -->
   <main>
     <!-- About Section -->
     <section id="about" class="section about">
       <h2>Who is Ronnie?</h2>
       <p>Ronnie is the mascot of the Ronin Chain, here to bring you the latest news, updates, and insights about the world of crypto. Our mission is to make information about the Ronin Chain accessible, engaging, and fun for everyone!</p>
+      <div class="about-image">
+        <img src="about-image.jpg" alt="About Ronnie">
+      </div>
     </section>
 
     <!-- News Section -->
@@ -39,28 +57,12 @@
       <h2>Latest News</h2>
       <div class="news-grid">
         <div class="news-item">
-          <h3>Tamadotmeme space</h3>
-          <p>URGENT NEWS 💥🎤
-
-TOMORROW 
-@tamadotmeme
-  WILL BE OPENING A SPACE FOR NEW PROJECTS TO TALK AND TELL YOU MORE ABOUT THEIR PLANS, ARE YOU EXCITED? 
-
-$RONNIE WE WILL BE THERE 😎 
-
-Ronnie, the Ronin presenter.</p>
+          <h3>Tamadotmeme Space</h3>
+          <p>URGENT NEWS 💥🎤 TOMORROW @tamadotmeme WILL BE OPENING A SPACE FOR NEW PROJECTS TO TALK AND TELL YOU MORE ABOUT THEIR PLANS. ARE YOU EXCITED? $RONNIE WE WILL BE THERE 😎</p>
         </div>
         <div class="news-item">
-          <h3>800k kurorobeast subscribers</h3>
-          <p>Breaking news 🎤
-
-$Ronnie that's insane 800k subscribed to 
-@kurorobeast
- 
-
-I can't wait for the official launch
-
-@kurorosage</p>
+          <h3>800k Kurorobeast Subscribers</h3>
+          <p>Breaking news 🎤 $Ronnie that's insane 800k subscribed to @kurorobeast. I can't wait for the official launch @kurorosage.</p>
         </div>
       </div>
     </section>
@@ -70,14 +72,17 @@ I can't wait for the official launch
       <h2>Ronin Token Stats</h2>
       <div class="token-stats">
         <div class="stat-card">
+          <i class="fas fa-chart-line"></i>
           <h3>Price</h3>
           <p>Coming Soon</p>
         </div>
         <div class="stat-card">
+          <i class="fas fa-coins"></i>
           <h3>Market Cap</h3>
           <p>Coming Soon</p>
         </div>
         <div class="stat-card">
+          <i class="fas fa-exchange-alt"></i>
           <h3>24H Volume</h3>
           <p>Coming Soon</p>
         </div>
@@ -122,26 +127,31 @@ I can't wait for the official launch
         </div>
       </div>
     </section>
-	  <!-- Meme Section -->
-<section id="memes" class="section memes">
-  <h2>Ronnie Memes</h2>
-  <p>A fun collection of Ronnie memes from the community!</p>
-  <div class="meme-grid">
-    <img src="memes/1.png" alt="Meme 1" class="meme-item">
-    <img src="memes/2.png" alt="Meme 2" class="meme-item">
-    <img src="memes/3.png" alt="Meme 3" class="meme-item">
-    <img src="memes/4.png" alt="Meme 4" class="meme-item">
-    <img src="memes/5.png" alt="Meme 5" class="meme-item">
-    <img src="memes/6.png" alt="Meme 6" class="meme-item">
-    <img src="memes/7.png" alt="Meme 7" class="meme-item">
-  </div>
-</section>
 
+    <!-- Meme Section -->
+    <section id="memes" class="section memes">
+      <h2>Ronnie Memes</h2>
+      <p>A fun collection of Ronnie memes from the community!</p>
+      <div class="meme-grid">
+        <img src="memes/1.png" alt="Meme 1" class="meme-item">
+        <img src="memes/2.png" alt="Meme 2" class="meme-item">
+        <img src="memes/3.png" alt="Meme 3" class="meme-item">
+        <img src="memes/4.png" alt="Meme 4" class="meme-item">
+        <img src="memes/5.png" alt="Meme 5" class="meme-item">
+        <img src="memes/6.png" alt="Meme 6" class="meme-item">
+        <img src="memes/7.png" alt="Meme 7" class="meme-item">
+      </div>
+    </section>
   </main>
 
-	
+  <!-- Footer -->
   <footer class="footer">
     <p>© 2025 Ronnie the Presenter. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-discord"></i></a>
+      <a href="#"><i class="fab fa-telegram"></i></a>
+    </div>
   </footer>
 </body>
 </html>
