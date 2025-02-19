@@ -1,14 +1,15 @@
-// Add this script to enable the mobile toggle
+// main.js
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Mobile navigation toggle
   const toggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
 
   toggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+  // Lazy loading images (if any have the class "lazy-load")
   const lazyImages = document.querySelectorAll('.lazy-load');
 
   const lazyLoad = (image) => {
@@ -27,4 +28,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   lazyImages.forEach((img) => observer.observe(img));
 });
-

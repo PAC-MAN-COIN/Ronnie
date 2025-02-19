@@ -1,290 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ronnie the Presenter | Crypto News</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-	<!-- Add Lightbox CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Ronnie the Presenter | Crypto News</title>
 
-<!-- Add Lightbox JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-<link rel="icon" href="RonnieCoin.png">
-</head>
-<body>
-	<script src="main.js"></script>
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-overlay"></div>
-    <img src="Banner.jpg" alt="Ronnie Banner" class="hero-banner">
-    <div class="hero-content">
-      <img src="pfp.jpg" alt="Ronnie Profile" class="hero-profile">
-      <h1>Ronnie the Presenter</h1>
-      <p>The latest and greatest news about the Ronin Chain and crypto world!</p>
-      <a href="#news" class="cta-button">Explore News</a>
-    </div>
-  </header>
+    <!-- Google Fonts: Luckiest Guy for headings and Roboto for body -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Navigation Bar -->
-<nav class="nav-bar">
-  <div class="nav-container">
-    <div class="nav-logo">
-      <img src="RonnieLogo.png" alt="Ronnie Logo">
-    </div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#stats">Stats</a></li>
-      <li><a href="#roadmap">Roadmap</a></li>
-      <li><a href="#memes">Memes</a></li>
-    </ul>
-    <div class="nav-toggle">
-      <i class="fas fa-bars"></i>
-    </div>
-  </div>
-</nav>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 
-  <!-- Main Content -->
-  <main>
-<!-- About Section -->
-<section id="about" class="section about">
-  <div class="about-container">
-    <div class="about-content">
-      <h2>Who is Ronnie?</h2>
-      <p>Ronnie is the mascot of the Ronin Chain, here to bring you the latest news, updates, and insights about the world of crypto. Our mission is to make information about the Ronin Chain accessible, engaging, and fun for everyone!</p>
-      <a href="#news" class="cta-button">Learn More</a>
-    </div>
-    <div class="about-image">
-      <img src="RonnieCoin.png" alt="About Ronnie">
-    </div>
-  </div>
-</section>
+    <!-- Lightbox CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+      rel="stylesheet"
+    />
 
-<!-- News Section -->
-<section id="news" class="section news">
-  <h2>Latest News</h2>
-  <div class="news-grid">
-    <div class="news-item">
-      <div class="news-image">
-        <img src="BreakingNews.png" alt="News Image 1">
-        <div class="news-overlay"></div>
-      </div>
-      <div class="news-content">
-        <h3>Tamadotmeme Space</h3>
-        <p class="news-meta">By Ronnie | February 1, 2025</p>
-        <p>URGENT NEWS 💥🎤 TOMORROW @tamadotmeme WILL BE OPENING A SPACE FOR NEW PROJECTS TO TALK AND TELL YOU MORE ABOUT THEIR PLANS. ARE YOU EXCITED? $RONNIE WE WILL BE THERE 😎</p>
-        <a href="https://x.com/PresenterRonnie" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
-    <div class="news-item">
-      <div class="news-image">
-        <img src="BreakingNews.png" alt="News Image 2">
-        <div class="news-overlay"></div>
-      </div>
-      <div class="news-content">
-        <h3>800k Kurorobeast Subscribers</h3>
-        <p class="news-meta">By Ronnie | February 1, 2025</p>
-        <p>Breaking news 🎤 $Ronnie that's insane 800k subscribed to @kurorobeast. I can't wait for the official launch @kurorosage.</p>
-        <a href="https://x.com/PresenterRonnie" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
-    <!-- Add more news items as needed -->
-  </div>
-</section>
+    <!-- Our stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="RonnieCoin.png" />
+  </head>
 
-    <!-- Stats Section -->
-    <section id="stats" class="section stats">
-      <h2>Ronin Token Stats</h2>
-      <div class="token-stats">
-        <div class="stat-card">
-          <i class="fas fa-chart-line"></i>
-          <h3>Price</h3>
-          <p>Coming Soon</p>
+  <body>
+    <!-- Navigation Bar (fixed on top) -->
+    <nav class="nav-bar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="RonnieLogo.png" alt="Ronnie Logo" />
         </div>
-        <div class="stat-card">
-          <i class="fas fa-coins"></i>
-          <h3>Market Cap</h3>
-          <p>Coming Soon</p>
-        </div>
-        <div class="stat-card">
-          <i class="fas fa-exchange-alt"></i>
-          <h3>24H Volume</h3>
-          <p>Coming Soon</p>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#stats">Stats</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#memes">Memes</a></li>
+        </ul>
+        <div class="nav-toggle">
+          <i class="fas fa-bars"></i>
         </div>
       </div>
-    </section>
+    </nav>
 
-<!-- Roadmap Section -->
-<section id="roadmap" class="section roadmap">
-  <h2>Ronin Chain Roadmap</h2>
-  <div class="timeline">
-    <!-- Phase 1 -->
-    <div class="timeline-phase">
-      <div class="phase-card">
-        <div class="phase-icon">
-          <i class="fas fa-rocket"></i>
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+      <div class="hero-overlay"></div>
+      <img src="Banner.jpg" alt="Ronnie Banner" class="hero-banner" />
+      <div class="hero-content">
+        <img src="pfp.jpg" alt="Ronnie Profile" class="hero-profile" />
+        <h1>Ronnie the Presenter</h1>
+        <p>The latest and greatest news about the Ronin Chain and crypto world!</p>
+        <a href="#news" class="cta-button">Explore News</a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- About Section -->
+      <section id="about" class="section about">
+        <div class="about-container">
+          <div class="about-content">
+            <h2>Who is Ronnie?</h2>
+            <p>
+              Ronnie is the mascot of the Ronin Chain—here to bring you the latest
+              news, updates, and insights about crypto. Our mission is to make
+              crypto information accessible, engaging, and fun!
+            </p>
+            <a href="#news" class="cta-button">Learn More</a>
+          </div>
+          <div class="about-image">
+            <img src="RonnieCoin.png" alt="About Ronnie" />
+          </div>
         </div>
-        <div class="phase-content">
-          <h3>Phase 1: Launch 🚀</h3>
-          <ul>
-            <li>Website launch</li>
-            <li>Community building</li>
-            <li>Initial token launch</li>
-          </ul>
-          <div class="phase-progress">
-            <span class="progress-text">Completed</span>
-            <div class="progress-bar">
-              <div class="progress-fill" style="width: 100%;"></div>
+      </section>
+
+      <!-- News Section -->
+      <section id="news" class="section news">
+        <h2>Latest News</h2>
+        <div class="news-grid">
+          <div class="news-item">
+            <div class="news-image">
+              <img src="BreakingNews.png" alt="News Image 1" />
+              <div class="news-overlay"></div>
+            </div>
+            <div class="news-content">
+              <h3>Tamadotmeme Space</h3>
+              <p class="news-meta">By Ronnie | February 1, 2025</p>
+              <p>
+                URGENT NEWS 💥🎤 Tomorrow @tamadotmeme will open a space for new
+                projects. Are you excited? $RONNIE will be there!
+              </p>
+              <a href="https://x.com/PresenterRonnie" class="read-more">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-image">
+              <img src="BreakingNews.png" alt="News Image 2" />
+              <div class="news-overlay"></div>
+            </div>
+            <div class="news-content">
+              <h3>800k Kurorobeast Subscribers</h3>
+              <p class="news-meta">By Ronnie | February 1, 2025</p>
+              <p>
+                Breaking news 🎤 $Ronnie – 800k subscribers to @kurorobeast! Stay
+                tuned for more updates.
+              </p>
+              <a href="https://x.com/PresenterRonnie" class="read-more">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Add more news items as needed -->
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section id="stats" class="section stats">
+        <h2>Ronin Token Stats</h2>
+        <div class="token-stats">
+          <div class="stat-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Price</h3>
+            <p>Coming Soon</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-coins"></i>
+            <h3>Market Cap</h3>
+            <p>Coming Soon</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-exchange-alt"></i>
+            <h3>24H Volume</h3>
+            <p>Coming Soon</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Roadmap Section -->
+      <section id="roadmap" class="section roadmap">
+        <h2>Ronin Chain Roadmap</h2>
+        <div class="timeline">
+          <!-- Phase 1 -->
+          <div class="timeline-phase">
+            <div class="phase-card">
+              <div class="phase-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <div class="phase-content">
+                <h3>Phase 1: Launch 🚀</h3>
+                <ul>
+                  <li>Website launch</li>
+                  <li>Community building</li>
+                  <li>Initial token launch</li>
+                </ul>
+                <div class="phase-progress">
+                  <span class="progress-text">Completed</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Phase 2 -->
+          <div class="timeline-phase">
+            <div class="phase-card">
+              <div class="phase-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div class="phase-content">
+                <h3>Phase 2: Expansion 🌍</h3>
+                <ul>
+                  <li>Partnership announcements</li>
+                  <li>Token staking feature</li>
+                  <li>Exchange listings</li>
+                </ul>
+                <div class="phase-progress">
+                  <span class="progress-text">In Progress</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 60%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Phase 3 -->
+          <div class="timeline-phase">
+            <div class="phase-card">
+              <div class="phase-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <div class="phase-content">
+                <h3>Phase 3: Innovation 💡</h3>
+                <ul>
+                  <li>New DApp integrations</li>
+                  <li>Gaming partnerships</li>
+                  <li>Ronnie gaming integration</li>
+                </ul>
+                <div class="phase-progress">
+                  <span class="progress-text">Upcoming</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Phase 4 -->
+          <div class="timeline-phase">
+            <div class="phase-card">
+              <div class="phase-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="phase-content">
+                <h3>Phase 4: Future Vision 🌟</h3>
+                <ul>
+                  <li>Full ecosystem rollout</li>
+                  <li>AI integration</li>
+                  <li>Global community events</li>
+                </ul>
+                <div class="phase-progress">
+                  <span class="progress-text">Upcoming</span>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Phase 2 -->
-    <div class="timeline-phase">
-      <div class="phase-card">
-        <div class="phase-icon">
-          <i class="fas fa-globe"></i>
-        </div>
-        <div class="phase-content">
-          <h3>Phase 2: Expansion 🌍</h3>
-          <ul>
-            <li>Partnership announcements</li>
-            <li>Token staking feature</li>
-            <li>Exchange listings</li>
-          </ul>
-          <div class="phase-progress">
-            <span class="progress-text">In Progress</span>
-            <div class="progress-bar">
-              <div class="progress-fill" style="width: 60%;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Phase 3 -->
-    <div class="timeline-phase">
-      <div class="phase-card">
-        <div class="phase-icon">
-          <i class="fas fa-lightbulb"></i>
-        </div>
-        <div class="phase-content">
-          <h3>Phase 3: Innovation 💡</h3>
-          <ul>
-            <li>New DApp integrations</li>
-            <li>Gaming partnerships</li>
-            <li>Ronnie gaming integration</li>
-          </ul>
-          <div class="phase-progress">
-            <span class="progress-text">Upcoming</span>
-            <div class="progress-bar">
-              <div class="progress-fill" style="width: 0%;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Phase 4 -->
-    <div class="timeline-phase">
-      <div class="phase-card">
-        <div class="phase-icon">
-          <i class="fas fa-star"></i>
-        </div>
-        <div class="phase-content">
-          <h3>Phase 4: Future Vision 🌟</h3>
-          <ul>
-            <li>Full ecosystem rollout</li>
-            <li>AI integration</li>
-            <li>Global community events</li>
-          </ul>
-          <div class="phase-progress">
-            <span class="progress-text">Upcoming</span>
-            <div class="progress-bar">
-              <div class="progress-fill" style="width: 0%;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
-<!-- Meme Section -->
-<section id="memes" class="section memes">
-  <h2>Ronnie Memes</h2>
-  <p>A fun collection of Ronnie memes from the community!</p>
-  <div class="meme-grid">
-    <div class="meme-item">
-      <img src="memes/1.png" alt="Meme 1" class="meme-image">
-      <div class="meme-overlay">
-        <a href="memes/1.png" class="meme-view" data-lightbox="memes" data-title="Meme 1">
-          <i class="fas fa-expand"></i>
-        </a>
-      </div>
-    </div>
-    <div class="meme-item">
-      <img src="memes/2.png" alt="Meme 2" class="meme-image">
-      <div class="meme-overlay">
-        <a href="memes/2.png" class="meme-view" data-lightbox="memes" data-title="Meme 2">
-          <i class="fas fa-expand"></i>
-        </a>
-      </div>
-    </div>
-    <div class="meme-item">
-      <img src="memes/3.png" alt="Meme 3" class="meme-image">
-      <div class="meme-overlay">
-        <a href="memes/3.png" class="meme-view" data-lightbox="memes" data-title="Meme 3">
-          <i class="fas fa-expand"></i>
-        </a>
-      </div>
-    </div>
-    <div class="meme-item">
-      <img src="memes/4.png" alt="Meme 4" class="meme-image">
-      <div class="meme-overlay">
-        <a href="memes/4.png" class="meme-view" data-lightbox="memes" data-title="Meme 4">
-          <i class="fas fa-expand"></i>
-        </a>
-      </div>
-    </div>
-    <div class="meme-item">
-      <img src="memes/5.png" alt="Meme 5" class="meme-image">
-      <div class="meme-overlay">
-        <a href="memes/5.png" class="meme-view" data-lightbox="memes" data-title="Meme 5">
-          <i class="fas fa-expand"></i>
-        </a>
-      </div>
-    </div>
-    <div class="meme-item">
-      <img src="memes/6.png" alt="Meme 6" class="meme-image">
-      <div class="meme-overlay">
-        <a href="memes/6.png" class="meme-view" data-lightbox="memes" data-title="Meme 6">
-          <i class="fas fa-expand"></i>
-        </a>
-      </div>
-    </div>
-    <div class="meme-item">
-      <img src="memes/7.png" alt="Meme 7" class="meme-image">
-      <div class="meme-overlay">
-        <a href="memes/7.png" class="meme-view" data-lightbox="memes" data-title="Meme 7">
-          <i class="fas fa-expand"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-  </main>
+      <!-- Meme Section -->
+      <section id="memes" class="section memes">
+        <h2>Ronnie Memes</h2>
+        <p>A fun collection of Ronnie memes from the community!</p>
+        <div class="meme-grid">
+          <div class="meme-item">
+            <img src="memes/1.png" alt="Meme 1" class="meme-image" />
+            <div class="meme-overlay">
+              <a
+                href="memes/1.png"
+                class="meme-view"
+                data-lightbox="memes"
+                data-title="Meme 1"
+              >
+                <i class="fas fa-expand"></i>
+              </a>
+            </div>
+          </div>
+          <div class="meme-item">
+            <img src="memes/2.png" alt="Meme 2" class="meme-image" />
+            <div class="meme-overlay">
+              <a
+                href="memes/2.png"
+                class="meme-view"
+                data-lightbox="memes"
+                data-title="Meme 2"
+              >
+                <i class="fas fa-expand"></i>
+              </a>
+            </div>
+          </div>
+          <div class="meme-item">
+            <img src="memes/3.png" alt="Meme 3" class="meme-image" />
+            <div class="meme-overlay">
+              <a
+                href="memes/3.png"
+                class="meme-view"
+                data-lightbox="memes"
+                data-title="Meme 3"
+              >
+                <i class="fas fa-expand"></i>
+              </a>
+            </div>
+          </div>
+          <div class="meme-item">
+            <img src="memes/4.png" alt="Meme 4" class="meme-image" />
+            <div class="meme-overlay">
+              <a
+                href="memes/4.png"
+                class="meme-view"
+                data-lightbox="memes"
+                data-title="Meme 4"
+              >
+                <i class="fas fa-expand"></i>
+              </a>
+            </div>
+          </div>
+          <div class="meme-item">
+            <img src="memes/5.png" alt="Meme 5" class="meme-image" />
+            <div class="meme-overlay">
+              <a
+                href="memes/5.png"
+                class="meme-view"
+                data-lightbox="memes"
+                data-title="Meme 5"
+              >
+                <i class="fas fa-expand"></i>
+              </a>
+            </div>
+          </div>
+          <div class="meme-item">
+            <img src="memes/6.png" alt="Meme 6" class="meme-image" />
+            <div class="meme-overlay">
+              <a
+                href="memes/6.png"
+                class="meme-view"
+                data-lightbox="memes"
+                data-title="Meme 6"
+              >
+                <i class="fas fa-expand"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 Ronnie the Presenter. All Rights Reserved.</p>
-    <div class="social-links">
-      <a href="https://x.com/PresenterRonnie"><i class="fab fa-twitter"></i></a>
-      <a href="https://discord.gg/azNHJHw66R"><i class="fab fa-discord"></i></a>
-      <a href="https://t.me/RonniePortall"><i class="fab fa-telegram"></i></a>
-    </div>
-  </footer>
-</body>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 Ronnie the Presenter. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="https://x.com/PresenterRonnie"><i class="fab fa-twitter"></i></a>
+        <a href="https://discord.gg/azNHJHw66R"><i class="fab fa-discord"></i></a>
+        <a href="https://t.me/RonniePortall"><i class="fab fa-telegram"></i></a>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+  </body>
 </html>
