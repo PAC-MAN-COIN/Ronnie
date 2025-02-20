@@ -15,7 +15,31 @@ body {
   color: #000;
   line-height: 1.5;
 }
+/* Announcement Bar Styles */
+.announcement {
+  /*background: url('tile-pattern.png');  Replace with your tile image URL */
+  background-color: #007bff; /* Fallback color */
+  color: #fff;
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
 
+.announcement span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 /* ------------------------------
    HERO SECTION & TOP BAR
 ------------------------------ */
