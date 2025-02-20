@@ -2,42 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
     <title>Ronnie the Presenter | Crypto News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Fonts: Luckiest Guy for headings and Roboto for body -->
+    <!-- Google Fonts: Luckiest Guy + Roboto -->
     <link
       href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Font Awesome for icons -->
+    <!-- Font Awesome (icons) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
 
-    <!-- Lightbox CSS -->
+    <!-- Lightbox CSS (if used for memes) -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
       rel="stylesheet"
     />
 
-    <!-- Our stylesheet -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="RonnieCoin.png" />
   </head>
 
   <body>
-    <!-- Navigation Bar (fixed on top) -->
-    <nav class="nav-bar">
-      <div class="nav-container">
-        <div class="nav-logo">
-          <img src="RonnieLogo.png" alt="Ronnie Logo" />
+    <!-- HERO / TOP SECTION -->
+    <header class="hero">
+      <!-- Hero background image -->
+      <img src="Banner.jpg" alt="Ronnie Banner" class="hero-bg" />
+
+      <!-- Top bar (pfp left, nav center, socials right) -->
+      <div class="top-bar">
+        <!-- Ronnie pfp on left -->
+        <div class="pfp-left">
+          <img src="pfp.jpg" alt="Ronnie PFP" class="ronnie-pfp" />
         </div>
+
+        <!-- Nav links in center -->
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#news">News</a></li>
@@ -45,25 +49,33 @@
           <li><a href="#roadmap">Roadmap</a></li>
           <li><a href="#memes">Memes</a></li>
         </ul>
+
+        <!-- Social icons in right -->
+        <div class="social-links top-right">
+          <a href="https://x.com/PresenterRonnie" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://discord.gg/azNHJHw66R" target="_blank"
+            ><i class="fab fa-discord"></i
+          ></a>
+          <a href="https://t.me/PresenterRonnie" target="_blank"
+            ><i class="fab fa-telegram"></i
+          ></a>
+        </div>
+
+        <!-- Mobile toggle (hamburger) if needed -->
         <div class="nav-toggle">
           <i class="fas fa-bars"></i>
         </div>
       </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <header id="hero" class="hero">
-      <div class="hero-overlay"></div>
-      <img src="Banner.jpg" alt="Ronnie Banner" class="hero-banner" />
-      <div class="hero-content">
-        <img src="pfp.jpg" alt="Ronnie Profile" class="hero-profile" />
-        <h1>Ronnie the Presenter</h1>
-        <p>The latest and greatest news about the Ronin Chain and crypto world!</p>
-        <a href="#news" class="cta-button">Explore News</a>
-      </div>
+      <!-- The "Buy Now" button, placed mid-right, pulsating -->
+      <a href="https://app.roninchain.com/token/0x53a5bfff455107da4464ef14db008cfe1f8169da" class="buy-now-btn">
+        Buy Now
+      </a>
     </header>
 
-    <!-- Main Content -->
+    <!-- MAIN CONTENT -->
     <main>
       <!-- About Section -->
       <section id="about" class="section about">
@@ -75,6 +87,7 @@
               news, updates, and insights about crypto. Our mission is to make
               crypto information accessible, engaging, and fun!
             </p>
+            <!-- "Learn More" button in About -->
             <a href="#news" class="cta-button">Learn More</a>
           </div>
           <div class="about-image">
@@ -87,6 +100,7 @@
       <section id="news" class="section news">
         <h2>Latest News</h2>
         <div class="news-grid">
+          <!-- Example News Item #1 -->
           <div class="news-item">
             <div class="news-image">
               <img src="BreakingNews.png" alt="News Image 1" />
@@ -99,11 +113,13 @@
                 URGENT NEWS 💥🎤 Tomorrow @tamadotmeme will open a space for new
                 projects. Are you excited? $RONNIE will be there!
               </p>
-              <a href="https://x.com/PresenterRonnie" class="read-more">
+              <a href="https://x.com/PresenterRonnie" class="read-more" target="_blank">
                 Read More <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
+
+          <!-- Example News Item #2 -->
           <div class="news-item">
             <div class="news-image">
               <img src="BreakingNews.png" alt="News Image 2" />
@@ -116,12 +132,12 @@
                 Breaking news 🎤 $Ronnie – 800k subscribers to @kurorobeast! Stay
                 tuned for more updates.
               </p>
-              <a href="https://x.com/PresenterRonnie" class="read-more">
+              <a href="https://x.com/PresenterRonnie" class="read-more" target="_blank">
                 Read More <i class="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
-          <!-- Add more news items as needed -->
+          <!-- Add more .news-item as needed -->
         </div>
       </section>
 
@@ -147,7 +163,7 @@
         </div>
       </section>
 
-      <!-- Roadmap Section -->
+      <!-- Roadmap Section (4 phases) -->
       <section id="roadmap" class="section roadmap">
         <h2>Ronin Chain Roadmap</h2>
         <div class="timeline">
@@ -173,6 +189,7 @@
               </div>
             </div>
           </div>
+
           <!-- Phase 2 -->
           <div class="timeline-phase">
             <div class="phase-card">
@@ -195,6 +212,7 @@
               </div>
             </div>
           </div>
+
           <!-- Phase 3 -->
           <div class="timeline-phase">
             <div class="phase-card">
@@ -217,6 +235,7 @@
               </div>
             </div>
           </div>
+
           <!-- Phase 4 -->
           <div class="timeline-phase">
             <div class="phase-card">
@@ -329,17 +348,29 @@
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="footer">
       <p>© 2025 Ronnie the Presenter. All Rights Reserved.</p>
       <div class="social-links">
-        <a href="https://x.com/PresenterRonnie"><i class="fab fa-twitter"></i></a>
-        <a href="https://discord.gg/azNHJHw66R"><i class="fab fa-discord"></i></a>
-        <a href="https://t.me/RonniePortall"><i class="fab fa-telegram"></i></a>
+        <a href="https://x.com/PresenterRonnie" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://discord.gg/azNHJHw66R" target="_blank"
+          ><i class="fab fa-discord"></i
+        ></a>
+        <a href="https://t.me/PresenterRonnie" target="_blank"
+          ><i class="fab fa-telegram"></i
+        ></a>
       </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- main.js (for mobile nav, etc.) -->
     <script src="main.js"></script>
+
+    <!-- Lightbox JS (if using for memes) -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
+      defer
+    ></script>
   </body>
 </html>
