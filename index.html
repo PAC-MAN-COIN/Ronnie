@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en"><head>
     <meta charset="UTF-8" />
     <title>Ronnie the Presenter | Crypto News</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,6 +21,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
       rel="stylesheet"
     />
+	<script src="https://unpkg.com/moralis/dist/moralis.js"></script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
@@ -155,20 +155,111 @@
           <div class="stat-card">
             <i class="fas fa-chart-line"></i>
             <h3>Price</h3>
-            <p>Coming Soon</p>
+            <p id="token-price">Loading...</p>
           </div>
           <div class="stat-card">
             <i class="fas fa-coins"></i>
             <h3>Market Cap</h3>
-            <p>Coming Soon</p>
+            <p id="token-marketcap">Loading...</p>
           </div>
           <div class="stat-card">
             <i class="fas fa-exchange-alt"></i>
-            <h3>24H Volume</h3>
-            <p>Coming Soon</p>
+            <h3>24H Percent Change</h3>
+            <p id="percent-change">Loading...</p>
           </div>
         </div>
       </section>
+<!-- Include Moralis SDK -->
+<script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+
+<script>
+  // Replace with your actual API key
+  const MORALIS_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6ImZjOGEyMzUzLWViYzEtNDhmMi1hMTUzLWM5ZjhjMDI5NGZiNyIsIm9yZ0lkIjoiNDMyODY5IiwidXNlcklkIjoiNDQ1Mjc5IiwidHlwZUlkIjoiZDlkYjc2NTQtYmQyYi00N2JiLTg3OTYtZmY5ZDAwMDJiNmJiIiwidHlwZSI6IlBST0pFQ1QiLCJpYXQiOjE3NDAxNzA3MTUsImV4cCI6NDg5NTkzMDcxNX0.WHs2ywvcEQqBf45MYAiEEHqHmlrx9EdgBJsB5XkNGbI";
+
+  // Ronin token details (same token for both calls)
+  const RONIN_CHAIN_ID = "0x7e4";
+  const RONIN_TOKEN_ADDRESS = "0x53a5bfff455107da4464ef14db008cfe1f8169da";
+
+  async function initStats() {
+    try {
+      // 1) Start Moralis ONCE
+      await Moralis.start({ apiKey: MORALIS_API_KEY });
+
+      // 2) Fetch price & market cap
+      await fetchRoninTokenData();
+
+      // 3) Fetch 24h percent change
+      await fetchRoninPercentChange();
+    } catch (error) {
+      console.error("Error initializing stats:", error);
+    }
+  }
+
+  // Fetch price & market cap from getTokenMetadata
+  async function fetchRoninTokenData() {
+    try {
+      const response = await Moralis.EvmApi.token.getTokenMetadata({
+        chain: RONIN_CHAIN_ID,
+        addresses: [RONIN_TOKEN_ADDRESS],
+      });
+      const data = response.raw[0];
+      console.log("Ronin Token Metadata:", data);
+
+      // PRICE
+      let priceText = "N/A";
+      if (data.usdPrice) {
+        priceText = `$${Number(data.usdPrice).toFixed(4)}`;
+      } else if (data.market_cap && data.circulating_supply) {
+        // approximate if no direct price
+        const priceApprox = Number(data.market_cap) / Number(data.circulating_supply);
+        priceText = `$${priceApprox.toFixed(4)}`;
+      }
+      document.getElementById("token-price").textContent = priceText;
+
+      // MARKET CAP
+      let marketCapText = "N/A";
+      if (data.market_cap) {
+        marketCapText = `$${Number(data.market_cap).toLocaleString()}`;
+      } else if (data.pairTotalLiquidityUsd) {
+        marketCapText = `$${Number(data.pairTotalLiquidityUsd).toLocaleString()}`;
+      }
+      document.getElementById("token-marketcap").textContent = marketCapText;
+    } catch (error) {
+      console.error("Error fetching Ronin token data:", error);
+      document.getElementById("token-price").textContent = "Error";
+      document.getElementById("token-marketcap").textContent = "Error";
+    }
+  }
+
+  // Fetch 24h percent change from getTokenPrice (Ronin)
+  async function fetchRoninPercentChange() {
+    try {
+      const response = await Moralis.EvmApi.token.getTokenPrice({
+        chain: RONIN_CHAIN_ID,
+        address: RONIN_TOKEN_ADDRESS,
+        include: "percent_change",
+      });
+      const data = response.raw;
+      console.log("Ronin Token Price with Percent Change:", data);
+
+      let percentChangeText = "N/A";
+      if (data["24hrPercentChange"] !== undefined) {
+        percentChangeText = `${Number(data["24hrPercentChange"]).toFixed(2)}%`;
+      }
+      document.getElementById("percent-change").textContent = percentChangeText;
+    } catch (error) {
+      console.error("Error fetching Ronin token percent change:", error);
+      document.getElementById("percent-change").textContent = "Error";
+    }
+  }
+
+  // Run on page load
+  initStats();
+</script>
+
+
+
+
 
       <!-- Roadmap Section (4 phases) -->
       <section id="roadmap" class="section roadmap">
